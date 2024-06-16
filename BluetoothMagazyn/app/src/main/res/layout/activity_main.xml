@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        tools:context="pl.magazyn.bluetoothmagazyn.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/przyciski">
+
+    <Button
+        android:text="@string/on_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:id="@+id/btnONOFF"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFindUnpairedDevices"
+        android:text="@string/szukaj"
+        android:onClick="btnDiscover"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnFindUnpairedDevices"
+        android:id="@+id/btnStartConnection"
+        android:text="@string/po_cz"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSend1"
+            android:layout_centerHorizontal="true"
+            android:text="@string/start"/>
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:text="@string/widoczno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnDiscoverable_on_off"
+        android:onClick="btnEnableDisable_Discoverable"
+        android:layout_below="@+id/btnONOFF"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        />
+
+    </RelativeLayout>
+
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/lista"
+    android:layout_below="@+id/przyciski">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/wyb_r_urz_dzenia"
+        android:textSize="15sp"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"/>
+
+    <ListView
+        android:id="@+id/lvNewDevices"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorAccent" />
+</RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/konsola"
+        android:layout_below="@+id/lista"
+        android:layout_marginTop="10dp">
+
+        <EditText
+
+            android:focusable="false"
+            android:id="@+id/editText"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:background="@drawable/rect_text_edit"
+            android:hint="@string/tu_wpisz_komende"
+            android:inputType="number"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:imeOptions="flagNoExtractUi"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/wy_lij"
+        android:id="@+id/btnSend"
+        android:layout_toRightOf="@+id/editText"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/kosnola2"
+        android:layout_below="@+id/konsola"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="@string/konsola"
+            android:textColor="#000000"
+            android:textSize="15sp" />
+
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        android:fillViewport="true"
+
+        android:layout_marginTop="20dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true">
+
+        <TextView
+            android:id="@+id/incomingMessage"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="20sp" />
+
+
+    </ScrollView>
+    </RelativeLayout>
+    </RelativeLayout>
+

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">BluetoothMagazyn</string>
+    <string name="wyb_r_urz_dzenia">Wybór urządzenia:</string>
+    <string name="szukaj">szukaj</string>
+    <string name="widoczno">widoczność</string>
+    <string name="po_cz">Połącz</string>
+    <string name="konsola">Konsola:</string>
+    <string name="tu_wpisz_komende">Tu wpisz komendę</string>
+    <string name="wy_lij">wyślij</string>
+    <string name="start">menu</string>
+    <string name="on_off">ON/OFF</string>
+</resources>
